@@ -61,7 +61,9 @@
  * environment.  This adaptation layer may be included in the Openchip source tree
  * itself or implemented externally.
  */
-#ifdef BLE_PLATFORM_CONFIG_INCLUDE
+#ifdef EXTERNAL_BLE_PLATFORM_CONFIG_INCLUDE
+#include EXTERNAL_BLEMANAGERIMPL_HEADER
+#elif defined(BLE_PLATFORM_CONFIG_INCLUDE)
 #include BLE_PLATFORM_CONFIG_INCLUDE
 #endif
 
